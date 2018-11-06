@@ -1,0 +1,16 @@
+@mixin respond-to($dig)
+	@media only screen and (max-width: $dig + px)
+		@content
+
+@mixin respond-from($max, $min)
+	@media only (max-width: $max + px) and (min-width: $min + px)
+		@content
+
+@mixin respond-h($dig)
+	@media only screen and (max-height: $dig + px)
+		@content
+
+@mixin respond-from-h($max, $min)
+	@media only (max-height: $max + px) and (min-height: $min + px)
+		@content
+

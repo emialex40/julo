@@ -1,0 +1,138 @@
+.img_wrapper
+  width: 100%
+  height: 515px
+  overflow: hidden
+  position: relative
+  //white-space: nowrap
+  +respond-to(1440)
+    height: 375px
+  +respond-to(814)
+    height: auto
+  .img_over
+    width: 115vw
+    position: absolute
+    top: 0
+    left: 0
+    transform: translateX(-5%)
+    +respond-to(814)
+      width: 100%
+      margin-left: 0
+      position: static
+    +respond-to(480)
+      padding-left: 0
+      transform: translateX(0)
+    ul
+      display: inline-block
+
+.img_item
+  display: inline-block
+  position: relative
+  width: 35vw
+  min-width: 290px
+  margin-right: 3vw
+  box-sizing: border-box
+  overflow: hidden
+  z-index: 100
+  cursor: pointer
+  +respond-to(814)
+    display: block
+    width: 87%
+    margin-bottom: 10px
+  +respond-to(480)
+    width: 100%
+  &__img
+    width: 100%
+    height: 515px
+    position: relative
+    background-repeat: no-repeat
+    background-position: center center
+    object-fit: cover
+    background-size: cover
+    background-color: #242938
+    transition: 1s
+    +respond-to(1440)
+      height: 375px
+  &__title
+    display: inline-block
+    width: proc(420,500)
+    height: 64px
+    position: absolute
+    top: 90px
+    left: 50%
+    transform: translateX(-50%)
+    box-sizing: border-box
+    white-space: pre-wrap
+    h3
+      display: block
+      white-space: pre-wrap
+      +h3--bold()
+      +respond-to(1024)
+        font-size: 24px
+  &__hover
+    width: 100%
+    height: 100%
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    display: block
+    opacity: 0
+    transition: 1s
+    &_container
+      width: proc(420,500)
+      height: 100%
+      margin: 0 auto
+      position: relative
+      box-sizing: border-box
+    &_title
+      padding-top: 64px
+      width: proc(420,500)
+      height: 23px
+      span
+        font-family: $reg
+        font-size: 20px
+        font-weight: normal
+        font-style: normal
+        font-stretch: normal
+        line-height: normal
+        letter-spacing: normal
+        color: $watermelon
+        opacity: 0.66
+        white-space: pre-wrap
+    &_desc
+      display: block
+      padding-top: 128px
+      width: proc(450,500)
+      height: 46px
+      opacity: 0.66
+      font-family: $light
+      font-size: 20px
+      font-weight: 300
+      font-style: normal
+      font-stretch: normal
+      line-height: normal
+      letter-spacing: normal
+      color: $white
+      white-space: pre-wrap
+      +respond-to(990)
+        font-size: 16px
+    &_links
+      position: absolute
+      bottom: 0
+      left: 0
+      padding-bottom: 25px
+      span
+        //opacity: 0.26
+        background-color: rgba(29,31,42,0.7)
+        opacity: .7
+        font-family: $light
+        font-weight: 300
+        font-style: normal
+        font-stretch: normal
+        line-height: 1.22
+        letter-spacing: 0.2px
+        color: #dcdfea
+        margin-right: 22px
+        padding: 6px 12px
+        +respond-to(414)
+          margin-right: 15px

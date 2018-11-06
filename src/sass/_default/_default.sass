@@ -1,0 +1,112 @@
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+  outline: none
+body input:required:valid,
+body textarea:required:valid
+  outline: none
+a:active:focus
+  outline: none
+
+html, body
+  height: 100%
+
+body
+  font-size: 16px
+  position: relative
+  line-height: 1.2
+  font-family: $light
+  background: $dark_two
+  overflow-x: hidden
+  opacity: 1
+  -webkit-font-smoothing: antialiased
+  +respond-to(1002)
+    font-size: 14px
+
+h2
+  font-family: $bold
+  font-size: 52px
+  font-weight: bold
+  font-style: normal
+  font-stretch: normal
+  line-height: 1.15
+  letter-spacing: 0.2px
+  color: $white
+  +respond-to(480)
+    font-size: 32px
+
+h1
+  font-family: $light
+  font-size: 52px
+  font-weight: 300
+  font-style: normal
+  font-stretch: normal
+  line-height: 1.15
+  letter-spacing: 0.2px
+  color: $white
+  +respond-to(480)
+    font-size: 32px
+
+h3
+  font-family: $light
+  font-size: 32px
+  font-weight: 300
+  font-style: normal
+  font-stretch: normal
+  line-height: 1
+  letter-spacing: 0.2px
+  color: $white
+
+ul
+  display: inline-block
+  li
+    display: inline-block
+
+a
+  text-decoration: none
+
+.header_wrapper
+  max-width: 1190px
+  margin: 0 auto
+  position: relative
+  +respond-to(1210)
+    margin-left: 10%
+    margin-right: 10%
+
+
+.container
+  max-width: 1040px
+  margin: 0 auto
+  box-sizing: border-box
+  +respond-to(1210)
+    margin-left: 10%
+    margin-right: 10%
+
+
+
+.row
+  display: flex
+  flex-wrap: wrap
+  justify-content: space-between
+
+.col
+  width: proc(500, 1040)
+  min-width: 300px
+  +respond-to(360)
+    min-width: 255px
+
+.col_min
+  width: proc(230, 1040)
+
+.section
+  width: 100%
+
+.current
+  color: $white !important
+
+.fixed
+  position: fixed
+  top: 0
+  left: 0
+  right: 0
+  box-shadow: 0 4px 25px 0 rgba(0,0,0,0.36)
+

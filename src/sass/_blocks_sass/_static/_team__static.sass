@@ -1,0 +1,49 @@
+/*====== team block =========*/
+.team_block
+  width: 100%
+  display: flex
+  flex-wrap: wrap
+  justify-content: space-between
+  margin-top: 80px
+  +respond-to(814)
+    justify-content: space-around
+    margin-top: 62px
+  &__item
+    width: 32%
+    min-width: 265px
+    height: border-box
+    +respond-to(814)
+      margin-bottom: 62px
+  &__img_box
+    width: 100%
+    height: 343px
+    position: relative
+  &__img_circle
+    width: 270px
+    height: 270px
+    background-image: linear-gradient(to top, rgba(36, 41, 56, 0), $dark)
+    border-radius: 50%
+    position: absolute
+    bottom: 0
+    left: 50%
+    transform: translateX(-50%)
+    transition: .5s ease-in-out
+  &__img
+    width: 100%
+    position: relative
+    img
+      position: absolute
+      top: 0
+      left: 50%
+      transform: translateX(-50%)
+      cursor: pointer
+  &__text_box
+    width: 100%
+    text-align: center
+    margin-top: 20px
+  &__title
+    +h3--bold()
+  &__position
+    +subtitle()
+    padding-top: 5px
+

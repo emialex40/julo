@@ -1,0 +1,45 @@
+.paralax
+  position: relative
+  overflow: hidden
+.back2
+  position: relative
+  width: 100%
+  height: 310px
+  +respond-to(480)
+    height: 130px
+
+  .back_tr2
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    width: 100%
+    height: 100%
+    +respond-to(480)
+      height: 205px
+      top: -96px
+  &__img2
+    position: absolute
+    top: -80px
+    left: 0
+    width: 100%
+    height: 100vh
+    background: url(../img/02-map-sfw.png) no-repeat
+    background-size: cover
+    object-fit: cover
+    +respond-to(1440)
+      top: -80px
+    +respond-to(814)
+      background: radial-gradient(circle at 0 22%, $white, #f8f8f9 63%, #bebec1)
+      height: 100%
+      top: 0
+
+
+
+.digi_item2
+  +display-type()
+  +respond-to(814)
+    font-size: 84px
+    height: 82px
+
+

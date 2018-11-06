@@ -1,0 +1,37 @@
+.footer
+  width: 100%
+  background: $dark
+  &__wrapper
+    display: flex
+    height: 62px
+    flex-wrap: wrap
+    justify-content: space-between
+    align-items: center
+    +respond-to(480)
+      height: auto
+      padding: 38px 0
+  &__info
+    width: proc(411,1040)
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    +respond-to(814)
+      width: 100%
+      flex-direction: column
+    a
+      +paragraph()
+      +respond-to(480)
+        margin-bottom: 18px
+  &__social
+    width: proc(106,1040)
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    +respond-to(480)
+      margin-top: 38px
+    +respond-to(814)
+      width: 30%
+    a
+      height: 22px
+      img
+        object-fit: contain

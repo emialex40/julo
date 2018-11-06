@@ -1,0 +1,128 @@
+
+<!--mixin link(className, href,name)-->
+<!--   a(class= className)(href= href)= name--><!DOCTYPE html>
+<html lang="ru-RU">
+  <head>
+    <meta charset="utf-8">
+    <title>Контакты</title>
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  </head>
+  <body>
+    <!--header-->
+    <header class="header">
+      <div class="header-js">
+        <div class="header_wrapper header_height">
+          <div class="menu_driver">
+            <div class="menu_objects">
+              <div class="logo"><a href="/"><img src="img/combined-shape.svg" alt="logo"></a></div>
+              <nav class="nav">
+                <ul class="nav_list">
+                  <li class="nav_list__item"><a href="/portfolio.html">Портфолио</a></li>
+                  <li class="nav_list__item"><a href="/team.html">Команда</a></li>
+                  <li class="nav_list__item"><a href="/contacts.html">Контакты</a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+        <div class="header-js__mob fixed">
+          <div class="header_wrapper header_height--mob">
+            <div class="menu_driver--mob">
+              <div class="menu_objects">
+                <div class="logo"><a href="/"><img src="img/combined-shape.svg" alt="logo"></a></div>
+                <nav class="nav">
+                  <ul class="nav_list">
+                    <li class="nav_list__item"><a href="/portfolio.html">Портфолио</a></li>
+                    <li class="nav_list__item"><a href="/team.html">Команда</a></li>
+                    <li class="nav_list__item"><a href="/contacts.html">Контакты</a></li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!--contacts-->
+    <section class="section contacts">
+      <div class="container">
+        <div class="contacts__header light-grey">Контакты</div>
+        <div class="contacts__wrapper row">
+          <div class="col">
+            <div class="info">
+              <div class="info__title">Телефон</div><a class="info__obj" href="tel:+74993946202">+7 (499) 394 62 02</a>
+            </div>
+            <div class="info">
+              <div class="info__title">Адрес</div><span class="info__obj">Нижегородская, 29-33с1</span>
+            </div>
+          </div>
+          <div class="col">
+            <div class="info">
+              <div class="info__title">Почта</div><a class="info__obj" href="mailto:info@startjulo.ru">info@startjulo.ru</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section contacts_form">
+      <div class="container">
+        <div class="contacts__header light-grey">Напишите нам</div>
+        <div class="contacts__wrapper">
+          <div class="col">
+            <div class="form">
+              <form id="form" action="post">
+                <div class="input_box">
+                  <label class="label" for="name">Имя*</label>
+                  <input class="input" id="name" type="text" name="name">
+                  <div class="input_error"></div>
+                </div>
+                <div class="input_box">
+                  <label class="label" for="company">Компания</label>
+                  <input class="input" id="company" type="text" name="company">
+                </div>
+                <div class="input_box">
+                  <label class="label" for="emial">E-mail *</label>
+                  <input class="input" id="email" type="text" name="email">
+                  <div class="input_error"></div>
+                </div>
+                <div class="input_box">
+                  <label class="label" for="message">Сообщение *</label>
+                  <textarea class="textarea" id="message" type="text" name="message"></textarea>
+                  <div class="input_error"></div>
+                </div>
+                <div class="input_box">
+                  <div class="input_submit">
+                    <input class="submit" type="submit">
+                    <div class="submit_error"></div>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div class="contacts_fotm__text"><span>Нажимая кнопку “Отправить” вы даете согласие на <a href="#">обработку персональных данных</a>.</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--footer-->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__wrapper">
+          <div class="footer__info"><a href="tel:+74993946202">+7 (499) 394 62 02</a><a href="mailto:info@startjulo.ru">info@startjulo.ru</a></div>
+          <div class="footer__social"><a href="#"><img src="img/facebook.svg" alt="facebook"></a><a href="#"><img src="img/insta.svg" alt="facebook"></a><a href="#"><img src="img/vk.svg" alt="facebook"></a></div>
+        </div>
+      </div>
+    </footer>
+    <link rel="stylesheet" href="css/main.css">
+    <!--link(rel='stylesheet', href='libs/jquery.parallax.css')-->
+    <script type="text/javascript" src="libs/jquery/jquery.min.js"></script>
+    <!--script(src="https://code.jquery.com/jquery-migrate-3.0.1.js")-->
+    <!--script(src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.js")-->
+    <script type="text/javascript" src="js/common.js"></script>
+    <script type="text/javascript" src="libs/auoresize-textarea.js"></script>
+    <script type="text/javascript" src="libs/rellax.min.js"></script>
+    <!--script(type="text/javascript" src='https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js')-->
+    <!--script(type="text/javascript" src='libs/jquery.parallax.min.js')-->
+  </body>
+</html>

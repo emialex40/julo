@@ -1,0 +1,8 @@
+/node_modules/
+/.git/
+/**/*.psd
+/**/Thumbs.db
+/.idea/
+/.vscode/
+
+package-lock.json

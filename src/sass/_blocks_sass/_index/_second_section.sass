@@ -1,0 +1,112 @@
+.second
+  position: relative
+  overflow: hidden
+  +respond-to(814)
+    overflow: initial
+
+.back
+  position: relative
+  width: 100%
+  height: 469px
+  +respond-to(480)
+    height: 141px
+
+  .back_tr
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    +respond-to(480)
+      top: -330px
+      height: 468px
+  &__img
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100vh
+    background: url(../img/01-moon-sfw.png) no-repeat center center
+    background-size: cover
+    object-fit: cover
+    +respond-to(814)
+      background: radial-gradient(circle at 0 22%, $white, #f8f8f9 63%, #bebec1)
+      height: 100%
+.parallax-window
+  min-height: 400px
+  background: transparent
+
+.arrow
+  display: inline-block
+  position: absolute
+  top: 59px
+  left: 50%
+  transform: translateX(-50%)
+  z-index: 10
+  +respond-to(992)
+    top: 0
+  +respond-to(814)
+    top: -90px
+  &_txt
+    height: 23px
+    opacity: 0.98
+    +paragraph--grey()
+    position: relative
+    &:after
+      content: ""
+      width: 40px
+      height: 14px
+      background: url(../img/line.svg) no-repeat
+      position: absolute
+      bottom: -28px
+      left: 50%
+      transform: translateX(-50%)
+
+.parallax_wrapper
+  box-sizing: border-box
+  min-height: 122px
+
+.digi, .digi2, .digi3
+  position: absolute
+  left: 0
+  //top: 250px
+  width: 100%
+  height: 235px
+  +respond-to(814)
+    height: auto
+
+.digi_item
+  +display-type()
+  +respond-to(814)
+    font-size: 84px
+    height: 82px
+
+.digi
+  //top: 220px
+  bottom: 0
+  +respond-to(1440)
+    bottom: 0
+  +respond-to(814)
+    bottom: 11px
+.digi2
+  bottom: 50px
+  +respond-to(1440)
+    bottom: 50px
+  +respond-to(814)
+    bottom: 123px
+  +respond-to(650)
+    bottom: 123px
+  +respond-to(480)
+    bottom: 17px
+
+
+.digi3
+  top: -30px
+  +respond-to(1440)
+    top: -30px
+  +respond-to(814)
+    top: -9px
+
+  +respond-to(480)
+    top: -16px
+

@@ -1,0 +1,23 @@
+.banner
+  width: 100%
+  padding-bottom: 100px
+  +respond-to(814)
+    padding-bottom: 38px
+  &__title
+    width: 500px
+    height: 32px
+    font-family: $light
+    font-size: 32px
+    font-weight: 300
+    font-style: normal
+    font-stretch: normal
+    line-height: 1
+    letter-spacing: 0.2px
+    color: $white
+    +respond-to(480)
+      font-size: 20px
+  &__text
+    +paragraph()
+    padding-top: 24px
+    +respond-to(814)
+      padding-top: 18px

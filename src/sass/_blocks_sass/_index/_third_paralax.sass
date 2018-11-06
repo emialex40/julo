@@ -1,0 +1,53 @@
+.third
+  position: relative
+  overflow: hidden
+
+.back3
+  position: relative
+  width: 100%
+  height: 469px
+  //+respond-to(480)
+  //  height: 220px
+  .back_tr3
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background: blue
+  &__img3
+    position: absolute
+    top: -90px
+    left: 0
+    width: 100%
+    height: 100vh
+    background: radial-gradient(circle at 0 22%, $white, #f8f8f9 63%, #bebec1)
+    //background-size: cover
+    object-fit: cover
+    +respond-to(1440)
+      top: -90px
+    +respond-to(814)
+      height: 100%
+      top: 0
+
+.digi_item3
+  +display-type()
+  +respond-to(814)
+    font-size: 84px
+    height: 82px
+
+.third_text
+  position: absolute
+  bottom: 0
+  left: 0
+  right: 0
+  +respond-to(480)
+    bottom: 69px
+  &__block
+    width: proc(770,1040)
+    +respond-to(814)
+      width: 100%
+    h2
+      padding-bottom: 38px
+    p
+      +paragraph()

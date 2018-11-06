@@ -1,0 +1,29 @@
+section.section.contacts_form
+ .container
+   .contacts__header.light-grey Напишите нам
+   .contacts__wrapper
+     .col
+       .form
+         form#form(action="post")
+           .input_box
+             label.label(for="name") Имя*
+             input.input#name(type="text",name="name")
+             .input_error
+           .input_box
+             label.label(for="company") Компания
+             input.input#company(type="text",name="company")
+           .input_box
+             label.label(for="emial") E-mail *
+             input.input#email(type="text",name="email")
+             .input_error
+           .input_box
+             label.label(for="message") Сообщение *
+             textarea.textarea#message(type="text",name="message")
+             .input_error
+           .input_box
+             .input_submit
+               input.submit(type="submit")
+               .submit_error
+       .contacts_fotm__text
+         span Нажимая кнопку “Отправить” вы даете согласие на <a href="#">обработку персональных данных</a>.
+

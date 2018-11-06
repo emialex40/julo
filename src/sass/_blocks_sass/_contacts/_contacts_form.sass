@@ -1,0 +1,89 @@
+.contacts_form
+  width: 100%
+  padding-top: 62px
+  padding-bottom: 158px
+  +respond-to(480)
+    padding-bottom: 100px
+
+
+.form
+  width: 100%
+  .input_box
+    width: 100%
+    margin-bottom: 50px
+  .label
+    display: block
+    +ui--title()
+  .input
+    display: block
+    width: 100%
+    height: 36px
+    background: inherit
+    border: none
+    border-bottom: 2px solid $dark !important
+    outline: none
+    +paragraph--regular()
+    &:focus
+      border-bottom: 2px solid $white !important
+  .textarea
+    @extend .input
+  .error
+    border-bottom: 2px solid #e8493a !important
+  .input_error
+    font-family: $light
+    font-size: 14px
+    color: #e8493a
+    padding-top: 2px
+  .input_submit
+    display: inline-block
+    position: relative
+    left: 50%
+    transform: translateX(-50%)
+    .submit
+      width: 340px
+      height: 50px
+      border-radius: 2px
+      background-color: $dark
+      border: none
+      cursor: pointer
+      outline: none
+      font-family: $reg
+      font-size: 20px
+      font-weight: normal
+      font-style: normal
+      font-stretch: normal
+      color: $slate
+      transition: .5s ease-in-out
+      &--success
+        border-bottom: 2px solid #3ae89d
+        width: 338px !important
+      +respond-to(480)
+        width: 305px
+      +respond-to(480)
+        width: 255px
+      &:hover
+        background-color: #f3696f
+        transition: .5s ease-in-out
+        color: $white
+      &:active
+        background-color: $watermelon
+.contacts_fotm__text
+  width: 100%
+  text-align: center
+  +respond-to(480)
+    margin-top: -20px
+  span
+    font-family: $light
+    font-size: 18px
+    font-weight: 300
+    font-style: normal
+    font-stretch: normal
+    line-height: 1.22
+    letter-spacing: 0.2px
+    color: $slate
+    a
+      color: $slate
+      transition: .5s ease-in-out
+      &:hover
+        color: $watermelon
+        transition: .5s ease-in-out
