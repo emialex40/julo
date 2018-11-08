@@ -131,7 +131,7 @@ $(document).ready(function () {
         $(window).scroll(function(e){
             var state = $(this).scrollTop(),
                 w = $(window).scrollTop();
-            if(w >= 125){
+            if(w >= 0){
                 if(state > lastScroll) {
                     mobNav.slideUp(500);
                 } else {
@@ -223,7 +223,9 @@ $(document).ready(function () {
         });
     } else {
         //mobile
-        mobileScroll();
+        $('.logo').css({
+            'position': 'fixed'
+        });
     }
 
 
