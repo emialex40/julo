@@ -157,8 +157,7 @@ a {
   top: 0;
   left: 0;
   right: 0;
-  z-index: 10000;
-  background: #1d1f2a; }
+  z-index: 10000; }
 
 .tech {
   position: fixed;
