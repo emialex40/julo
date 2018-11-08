@@ -5,9 +5,9 @@ $(document).ready(function () {
     *
     * */
 
+    //TODO: vars
     var size = $(window).width(),
         path =  window.location.pathname,
-        flag = false,
         mobNav = $('.header-js__mob');
 
     /*
@@ -16,7 +16,8 @@ $(document).ready(function () {
     *
     */
 
-    // numbers parallax
+    //TODO: numbers parallax
+
     function parralax()
     {
         var relax = new Rellax('.rellax', {
@@ -30,12 +31,6 @@ $(document).ready(function () {
     }
 
 
-
-
-
-    console.log(loadW);
-
-
     //best section mousemove functions
     //TODO: mouseMove function
     function mouseMove(e, elem)
@@ -46,8 +41,6 @@ $(document).ready(function () {
         var elWidth = elem.width();
         var parLWh = elem.children().width();
         var loadW = (parLWh - elWidth) / 2;
-        console.log(loadW);
-
 
         var w  = elem.width() / 3,
             child = elem.children(),
@@ -78,6 +71,49 @@ $(document).ready(function () {
         }
     }
 
+
+    //TODO: team mousemove function
+    function mouseMoveTeam(e, elem)
+    {
+        var win = $(window).width();
+        var block = elem.width();
+        var zone = win / 3;
+        var zone2 = zone + zone;
+        var child = elem.children();
+        var conr = $('.container').width();
+        var item = $('.team_block__item').width();
+        var itemChild = $('.team_block__img_circle').width();
+        var itemResult = (item - itemChild) / 2;
+        var pX = e.pageX;
+        var marg = (block - conr) / 2;
+        var marg = marg - itemResult;
+
+        if (pX < zone) {
+            child.css({
+                'transform': 'translateX('+ marg +'px)',
+                'transition': '2s'
+            });
+        }
+        else if (pX > zone && pX < zone2) {
+            child.css({
+                'transform': 'translateX(0)',
+                'transition': '2s'
+            });
+        }
+        else if (pX > zone2) {
+            child.css({
+                'transform': 'translateX(-'+ marg +'px)',
+                'transition': '2s'
+            });
+        } else {
+            child.css({
+                'transform': 'translateX(0)',
+                'transition': '2s'
+            });
+        }
+
+    }
+
     //TODO: function reset
     function mouseRes(elem)
     {
@@ -88,7 +124,7 @@ $(document).ready(function () {
         });
     }
 
-    // mobile scroll function
+    //TODO: mobile scroll function
     function mobileScroll()
     {
         var lastScroll = 0;
@@ -108,7 +144,7 @@ $(document).ready(function () {
         });
     }
 
-    // validate functions
+    //TODO: validate functions
     function validName()
     {
         var name = $('#name');
@@ -176,25 +212,23 @@ $(document).ready(function () {
     *
     */
 
-    //fixed menu
+    //TODO: fixed menu
     if(size >= '814'){
         // desctop
         $(window).scroll(function () {
             var w = $(window).scrollTop();
-            if(w >= 125){
-                mobNav.slideDown(500);
-            }else {
-                mobNav.slideUp(500);
+            if(w >= 0){
+                $('.header-js').addClass('fixed');
             }
-
         });
     } else {
+        //mobile
         mobileScroll();
     }
 
 
 
-    // active page highlighter
+    //TODO: active page highlighter
     $('.nav_list__item a').each(function () {
         // get all links
         var location = window.location.href; // get adres page
@@ -206,11 +240,13 @@ $(document).ready(function () {
 
 
 
-    //home page highlight deactivate
-    if(path === '/' || path === '/portfolio.html'){
-        if(size >= '814'){
-            parralax();
+    //TODO: home page highlight deactivate
+    if (path === '/' && size >= '814') {
+        parralax();
+    }
 
+    //TODO: mouseMove init
+        if(size >= '814'){
             var jsOver = $('.js-over').width();
             var parL = $('.parallax-layer');
             var parLWh = parL.width();
@@ -221,7 +257,6 @@ $(document).ready(function () {
             });
 
             //best section mousemove event
-            //TODO: mouseMove init team
             $('.js-over').hover(function () {
                 var that = $(this);
 
@@ -235,19 +270,19 @@ $(document).ready(function () {
 
             $('.js-team').hover(function () {
                 var that = $(this);
-                var t = that.children().width();
-                console.log(t);
                 that.mousemove(function(e){
-                    mouseMove(e, that);
+                    mouseMoveTeam(e, that);
                 });
             }, function () {
                 var that = $(this);
-                mouseRes(that);
+                that.children().css({
+                    'transform': 'translateX(0)',
+                    'transition': '2s'
+                })
             });
         }
-    }
 
-    // team hover
+    //TODO: team hover
     $('.js-img').hover(function () {
       $(this).parent().siblings('.team_block__img_circle').css({
           'background-color': '#e94e53',
@@ -258,7 +293,7 @@ $(document).ready(function () {
           $(this).parent().siblings('.team_block__img_circle').removeAttr('style');
         });
 
-    // textarea autoresize init
+    //TODO: textarea autoresize init
     $('textarea').autoResize({
         extraSpace : 0
     });
@@ -289,7 +324,7 @@ $(document).ready(function () {
     //
     //     });
 
-    //best section items hover
+    //TODO: best section items hover
     $('.img_item').hover(
         function () {
             $(this).children('.img_item__img').css({
@@ -317,7 +352,7 @@ $(document).ready(function () {
             });
         });
 
-    // form validate
+    //TODO: form validate
     $('#name').blur(function () {
         validName();
     });
@@ -330,7 +365,7 @@ $(document).ready(function () {
         validMessage();
     });
 
-    //send form
+    //TODO: send form
     $("#form").submit(function(e) {
         e.preventDefault();
         validate();
