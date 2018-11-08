@@ -68,8 +68,8 @@ gulp.task('browser-sync', function() {
 			baseDir: 'src'
 		},
 		notify: false,
-		tunnel: true,
-		tunnel: "demo" //Demonstration page: http://demo.localtunnel.me
+		// tunnel: true,
+		// tunnel: "demo" //Demonstration page: http://demo.localtunnel.me
 	});
 });
 

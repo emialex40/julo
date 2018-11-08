@@ -29,43 +29,61 @@ $(document).ready(function () {
         });
     }
 
+
+
+
+
+    console.log(loadW);
+
+
     //best section mousemove functions
+    //TODO: mouseMove function
     function mouseMove(e, elem)
     {
+        var conr = $('.container').width();
+        var win = $(window).width();
+        var marg = (win - conr) / 2;
+        var elWidth = elem.width();
+        var parLWh = elem.children().width();
+        var loadW = (parLWh - elWidth) / 2;
+        console.log(loadW);
+
+
         var w  = elem.width() / 3,
-            child = elem.children('.parallax-layer'),
+            child = elem.children(),
             w2 = w + w - 20,
             pX = e.pageX;
         if(pX < w ){
             child.css({
-                'transform': 'translateX(10%)',
+                'transform': 'translateX('+ marg +'px)',
                 'transition': '2s'
             });
         }
         else if(pX > w && pX < w2){
             child.css({
-                'transform': 'translateX(-5%)',
+                'transform': 'translateX(-'+ loadW +'px)',
                 'transition': '2s'
             });
         }
         else if(pX > w2) {
             child.css({
-                'transform': 'translateX(-20%)',
+                'transform': 'translateX(-'+ ((loadW*2) + marg) +'px)',
                 'transition': '2s'
             });
         } else {
             child.css({
-                'transform': 'translateX(-5%)',
+                'transform': 'translateX(-'+ loadW +'px)',
                 'transition': '2s'
             });
         }
     }
 
+    //TODO: function reset
     function mouseRes(elem)
     {
-        var child = elem.children('.parallax-layer');
+        var child = elem.children();
         child.css({
-            'transform': 'translateX(-5%)',
+            'transform': 'translateX('+ -loadW +'px)',
             'transition': '2s'
         });
     }
@@ -186,14 +204,39 @@ $(document).ready(function () {
         }
     });
 
+
+
     //home page highlight deactivate
-    if(path === '/'){
+    if(path === '/' || path === '/portfolio.html'){
         if(size >= '814'){
             parralax();
 
+            var jsOver = $('.js-over').width();
+            var parL = $('.parallax-layer');
+            var parLWh = parL.width();
+            var loadW = (parLWh - jsOver) / 2;
+
+            parL.css({
+                'transform': 'translateX('+ -loadW +'px)'
+            });
+
             //best section mousemove event
+            //TODO: mouseMove init team
             $('.js-over').hover(function () {
                 var that = $(this);
+
+                that.mousemove(function(e){
+                    mouseMove(e, that);
+                });
+            }, function () {
+                var that = $(this);
+                mouseRes(that);
+            });
+
+            $('.js-team').hover(function () {
+                var that = $(this);
+                var t = that.children().width();
+                console.log(t);
                 that.mousemove(function(e){
                     mouseMove(e, that);
                 });
